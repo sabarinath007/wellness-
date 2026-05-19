@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F7FAF7;
+  --foreground: #6B7280;
+  --accent: #2FAE66;
+  --accent-secondary: #38D996;
+  --bg-light: #DDF5E3;
+  --bg-mint: #CFF3D8;
+  --text-primary: #0E3B2E;
+  --text-secondary: #6B7280;
+  --surface: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-bg-light: var(--bg-light);
+  --color-bg-mint: var(--bg-mint);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--text-secondary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Custom utilities for gradients and glassmorphism */
+@utility glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(47, 174, 102, 0.1);
+}
+
+@utility text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility bg-gradient-soft {
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-mint));
+}
+
+@utility bg-gradient-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+}
