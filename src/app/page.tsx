@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { GainSection } from "@/components/sections/GainSection";
 import { ProgramsSection } from "@/components/sections/ProgramsSection";
 import { ReviewSection } from "@/components/sections/ReviewSection";
 import { BookingSection } from "@/components/sections/BookingSection";
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <GainSection />
       <ProgramsSection />
       <ReviewSection />
       <BookingSection />
